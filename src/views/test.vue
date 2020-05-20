@@ -14,13 +14,13 @@
 </template>
 <script lang="ts">
 	import { Component, Vue } from 'vue-property-decorator';
-	import DataTable from '@/components/table.vue'
+	import DataTable from '@/components/table.vue';
 
 	@Component({
-			components: { DataTable },
+		components: { DataTable },
 	})
 	export default class Test extends Vue {
-	  headerItems = [
+		headerItems = [
 			{
 				text: 'Марка автомобиля',
 				value: 'name',
@@ -36,12 +36,12 @@
 			{
 				text: 'Внедорожник',
 				value: 'offRoad',
-		  	slot: true,
+				slot: true,
 			},
 			{
 				text: 'Цвет кузова',
 				value: 'color',
-		  	slot: true,
+				slot: true,
 			},
 			{
 				text: 'Цена $',
@@ -50,18 +50,18 @@
 			{
 				text: 'Популярность (1-100%)',
 				value: 'popularity',
-		  	slot: true,
+				slot: true,
 			},
 		];
 
-	  items = [
+		items = [
 			{
-		  	name: 'BMW m3',
-		  	volume: 2.5,
-		  	maxSpeed: 230,
-		  	color: 'black',
-		  	prise: 100000,
-		  	popularity: '70',
+				name: 'BMW m3',
+				volume: 2.5,
+				maxSpeed: 230,
+				color: 'black',
+				prise: 100000,
+				popularity: '70',
 				offRoad: false,
 			},
 			{
@@ -71,7 +71,7 @@
 				color: 'yellow',
 				prise: 40000,
 				popularity: '40',
-		  	offRoad: false,
+				offRoad: false,
 			},
 			{
 				name: 'ZAZ 968',
@@ -80,7 +80,7 @@
 				color: 'orange',
 				prise: 1000,
 				popularity: '100',
-		  	offRoad: true,
+				offRoad: true,
 			},
 			{
 				name: 'Lamborghini Aventador',
@@ -89,22 +89,22 @@
 				color: 'red',
 				prise: 1500000,
 				popularity: '30',
-		  	offRoad: false,
+				offRoad: false,
 			}
-		]
+		];
 	}
 </script>
 <style lang="stylus">
-	.color-block
-		display inline-block
-		width 20px
-		height 20px
-		color black
-		&.green
-			background-color green
+.color-block
+	display inline-block
+	width 20px
+	height 20px
+	color black
+	&.green
+		background-color green
 
-	.popularity
-		&__wrap
-			display block
-			height 20px
+.popularity
+	&__wrap
+		display block
+		height 20px
 </style>
